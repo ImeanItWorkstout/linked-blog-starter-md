@@ -6,11 +6,12 @@ These are the markdown files for the [linked-blog-starter](https://github.com/ma
 	Students with attention Attention-Deficit Hyperactivity Disorder(ADHD) tend to get distracted easily or struggle focusing in class. ADHD commonly gets misinterpreted as laziness or poor discipline, leading to underdiagnosis. Conventional intervention is typically a one-on-one session, but this can draw unwanted peer attention and judgements. Back to focus presents an alternative, non-disruptive, desk-integrated tool that will help students directly from their desks. By installing a custom foot pedal equipped with Inertia Measurement Unit (IMU), the system will be able to track leg movements. When movements indicate restlessness or boredom, a vibration will be sent to the chair that will buzz softly the cue them back to focus.
 
 	Background
-		One of the most common neurodevelopment conditions affecting academic performance is Attention-Deficit Hyperactivity Disorder(ADHD). Most learning environment aim to help these students.
-		``
-		In typical Philippine public schools, classrooms are often densely populated. Making it difficult for teachers to provide personalized attention to students. Students with ADHD often struggle with focusing in class, usually manifesting as restlessness or zoning out. Current interventions involve one-on-one out of classroom session with the student. However, this can attract unwanted attention thus disrupting learning and academic performance. In addition, fidget tools that require the hand to use, takes away the hands of the students to write.
-		To address this, Project Back to Focus introduces an under-desked foot pedal that will monitor and track foot movements and provide private feedbacks. Allowing students to self-regulate seamlessly without disrupting the class from their own seats.
-		
+	One of the most common neurodevelopment conditions affecting academic performance is Attention-Deficit Hyperactivity Disorder(ADHD). Most learning environment aim to help these students.
+	``
+	In typical Philippine public schools, classrooms are often populated. Making it difficult for teachers to provide personalized attention to students. Students with ADHD often struggle with focusing in class, usually manifesting as restlessness or zoning out. Current interventions involve one-on-one out of classroom session with the student. However, this can attract unwanted attention thus disrupting learning and academic performance. In addition, fidget tools that require the hand to use, takes away the hands of the students to write.
+	
+	To address this, Project Back to Focus introduces an under-desked foot pedal that will monitor and track foot movements and provide private feedbacks. Allowing students to self-regulate seamlessly without disrupting the class from their own seats.
+	
 		
 	
 	
@@ -21,14 +22,16 @@ These are the markdown files for the [linked-blog-starter](https://github.com/ma
 		
 
 	System Architecture:
-		A custom foot pedal that is housed under a desk. It is Arduino powered connected to a IMU and a vibration motor that is rested in the chair.
+	A custom foot pedal that is housed under a desk. It is Arduino powered connected to a IMU and a vibration motor that is rested in the chair.
 
-	How it works:The IMU continuously track the angular frequency of students foot tapping or fidgetting.
+	How it works:
+	The IMU continuously track the frequency of students foot tapping or fidgetting.
 
-	Condition A(Hyperactivity): If the foot movements frequency exceeds 5 Hz for more than 10 seconds, then the Arduino identifies it as Hyperactivity(restlessness/impatience)
+	Condition A(Hyperactivity): 
+	If the foot movements frequency exceeds 5 Hz for more than 10 seconds, then the Arduino identifies it as Hyperactivity(restlessness/impatience)
 
 	Condition B(Zoning out):
-		If foot movements stops for more than 180 seconds (5 minutes) during an active lecture, then Arduino identifies it as zoning out.
+	If foot movements stops for more than 180 seconds (5 minutes) during an active lecture, then Arduino identifies it as zoning out.
 
 	Response: The system will send a low-frequency vibration that lasts for 1.5 seconds that will cue the student back to focus.
 
@@ -79,9 +82,9 @@ These are the markdown files for the [linked-blog-starter](https://github.com/ma
 
 **Project LINYA: An Arduino-Based Lane-Splitting Space Matrix and Warning Indicator for Blind Intersection Motorcycle Safety**
 
-### 🔍 1. Executive Summary
+###  1.  Statement of the problem
 
-Most cities in the Philippines experience high densities of motorcycle traffic, where riders frequently practice "overtaking" . A major hazard occurs at narrow, blind intersections where larger vehicles (trucks, SUVs) completely block a turning driver's line of sight, preventing them from seeing a high-speed motorcycle until an accident is inevitable. Project Side-View addresses this large vehicles blind spot by mounting an autonomous Arduino monitoring node onto roadside utility poles at high-risk intersections or on the vehicles itself. Using sensors, the system continuously maps the spatial gap between vehicle lanes. If a motorcycle is detected moving through a blind corridor simultaneously with a vehicle executing a turn, the system computes an immediate collision threat and triggers high-visibility road-surface laser projections to visually alert both operators before they cross paths.
+Most cities in the Philippines experience high densities of motorcycle traffic, where riders frequently practice "overtaking" . A major hazard occurs at narrow, blind intersections where larger vehicles (trucks, SUVs) completely block a turning driver's line of sight, preventing them from seeing a high-speed motorcycle until an accident is inevitable. Project Side-View addresses this large vehicles blind spot by mounting an autonomous Arduino monitoring node onto roadside utility poles at high-risk intersections or on the vehicles itself. Using sensors, the system continuously maps the gap between vehicle lanes. If a motorcycle is detected moving through a blind corridor simultaneously with a vehicle executing a turn, the system computes an immediate collision threat and triggers high-visibility road-surface laser projections to visually alert both operators before they cross paths.
 
 
 
@@ -89,7 +92,7 @@ Most cities in the Philippines experience high densities of motorcycle traffic, 
 
 The transportation in the Philippines has seen an exponential rise in two-wheeled motor vehicles, making motorcycles the primary mode of daily commuting for millions. Due to severe traffic, riders frequently utilize "overtaking" through the tight spaces between slow-moving or stationary lanes of cars and trucks.
 
-While overtaking saves time for motorcycles, it introduces severe safety vulnerabilities, particularly at blind intersections. When large vehicles like buses, trucks, or SUVs occupy the primary lanes, they create a complete visual blockage. A driver attempting to execute a turn at an intersection cannot see a filtering motorcycle approaching through the lane gap until the moment of impact. Standard vehicle-mounted blind-spot indicators are often too slow or uncalibrated for low-profile, fast two-wheelers, leading to high accident rates at narrow crossroads.
+While overtaking saves time for motorcycles, it introduces severe safety vulnerabilities, particularly at blind intersections. When large vehicles like buses, trucks, or SUVs occupy the primary lanes, they create a complete visual blockage. A driver attempting to execute a turn at an intersection cannot see a motorcycle approaching through the lane gap until the moment of impact. Standard vehicle-mounted blind-spot indicators are often too slow or can't detect low-profile, fast two-wheelers, leading to high accident rates at narrow crossroads.
 
 Rather than relying on expensive, vehicle-dependent radar systems, transportation safety can be significantly enhanced through smart, affordable indicators. Project Side-view addresses this problem by introducing an infrastructure-based, high-speed laser sensor. Placed at high-conflict blind corners or at vehicle itself, this automated system calculates collision probabilities in real time, projecting dynamic visual warnings directly onto the asphalt if it is mounted at an infrastructure, if it is mounted to a vehicle it will send a signal to the driver to secure vulnerable motorcycle commuters.
 
@@ -101,7 +104,7 @@ Rather than relying on expensive, vehicle-dependent radar systems, transportatio
         
     - **Predictive Calculation:** If the system calculates a vehicle lane occupancy change (indicating a turn into the intersection) while sensor registers a fast-approaching motorcycle profile within a 15-meter zone, a high-probability conflict is flagged.
         
-    - **Response:** The system immediately activates an intense, downward-projected visual grid onto the asphalt directly in front of the turning vehicle's windshield line-of-sight and activates an audio siren facing the oncoming rider.
+    - **Response:** The system immediately activates a downward-projected visual grid onto the asphalt directly in front of the turning vehicle's line-of-sight and activates an audio siren facing the oncoming rider.
         
 
 ### 4. Review of Related Literature (RRL)
@@ -120,4 +123,6 @@ In addressing the vulnerability of motorcycle commuters, **Chang et al. (2023)**
 
 - Real-time vision-based blind spot warning system: Experiments with motorcycles in daytime/nighttime conditions
 	https://link.springer.com/article/10.1007/s12239-013-0013-3
--
+
+
+https://canva.link/pqnplry8ppmqmyo
